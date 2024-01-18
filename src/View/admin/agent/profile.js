@@ -17,7 +17,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchAgentDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/agent/${Id}`);
+        const response = await axios.get(`https://back-end-cap.onrender.com/agent/${Id}`);
         const agent = response.data;
         setFullName(agent.fullName);
         setEmail(agent.email);
@@ -32,7 +32,7 @@ const Profile = () => {
 
   const handleUpdateProfile = async () => {
     try {
-      const response = await axios.put(`http://localhost:5000/agent/${Id}`, {
+      const response = await axios.put(`https://back-end-cap.onrender.com/agent/${Id}`, {
         fullName,
         email,
         password  

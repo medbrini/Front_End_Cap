@@ -19,13 +19,13 @@ const Dashboard = () => {
   const Navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/application')
+    axios.get('https://back-end-cap.onrender.com/application')
       .then((response) => setApplications(response.data))
       .catch((error) => console.error('Error fetching applications:', error));
   }, []);
 
   const handleUpdateState = (id) => {
-    axios.put(`http://localhost:5000/application/${id}`)
+    axios.put(`https://back-end-cap.onrender.com/application/${id}`)
       .then((response) => {
         const updatedApplication = response.data;
         setApplications((prevApplications) =>

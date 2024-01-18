@@ -23,7 +23,7 @@ const Register = () => {
   const registerUser = async (formData) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/agent/register",
+        "https://back-end-cap.onrender.com/agent/register",
         formData,
         {
           headers: {
